@@ -5,16 +5,18 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/index.js",
+    "start": "node build/index.js",
+    "build": "esbuild src/index.js --platform=node --bundle --minify --outfile=build/index.js",
     "dev": "nodemon --exec babel-node src/index.js"
   },
   "keywords": [],
-  "author": "Igor L Irianto <igoririanto@rocketmail.com>",
+  "author": "Chiwetelu Johnpaul <polymenjohn1@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "7.3.3",
     "@babel/node": "7.2.2",
     "@babel/preset-env": "7.3.1",
+    "esbuild": "^0.19.5",
     "nodemon": "1.18.10"
   },
   "dependencies": {
